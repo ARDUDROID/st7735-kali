@@ -5,6 +5,10 @@
 # uncomment if you get no picture on HDMI for a default "safe" mode
 #hdmi_safe=1
 
+# uncomment this if your display has a black border of unused pixels visible
+# and your display can output without overscan
+disable_overscan=1
+
 # uncomment the following to adjust overscan. Use positive numbers if console
 # goes off screen, and negative if there is too much border
 #overscan_left=16
@@ -52,33 +56,16 @@ dtparam=spi=on
 # Enable audio (loads snd_bcm2835)
 dtparam=audio=on
 
-# Automatically load overlays for detected cameras
-camera_auto_detect=1
-
-# Automatically load overlays for detected DSI displays
-display_auto_detect=1
-
-# Enable DRM VC4 V3D driver
-dtoverlay=vc4-kms-v3d
-max_framebuffers=2
-
-# Disable compensation for displays with overscan
-disable_overscan=1
-
-[cm4]
-# Enable host mode on the 2711 built-in XHCI USB controller.
-# This line should be removed if the legacy DWC2 controller is required
-# (e.g. for USB device mode) or if USB support is not required.
-otg_mode=1
+#[pi4]
+# Enable DRM VC4 V3D driver on top of the dispmanx display stack
+#dtoverlay=vc4-fkms-v3d
+#max_framebuffers=2
 
 [all]
+#dtoverlay=vc4-fkms-v3d
 
-[pi4]
-# Run as fast as firmware / board allows
-arm_boost=1
-
-[all]
-dtoverlay=dwc2
+# USB mass storage boot is available on Raspberry Pi 2B v1.2, 3A+, 3B, and 3B+ only.
+#program_usb_boot_mode=1
 
 dtoverlay=adafruit-st7735r,310x280,reset_pin=27,dc_pin=25,led_pin=24,rotate=270
 hdmi_force_hotplug=1
