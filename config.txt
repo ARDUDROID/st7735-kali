@@ -80,11 +80,11 @@ arm_boost=1
 [all]
 dtoverlay=dwc2
 
-dtoverlay=adafruit18,310x280,reset_pin=27,dc_pin=25,led_pin=24,rotate=270
+dtoverlay=adafruit-st7735r,310x280,reset_pin=27,dc_pin=25,led_pin=24,rotate=270
 hdmi_force_hotplug=1
 #hdmi_cvt=310 280 60 3 0 0 0
-hdmi_cvt=1280 720 60 3 0 0 0
-hdmi_group=2
-hdmi_mode=1
-hdmi_mode=87
-display_rotate=4
+#hdmi_cvt=1280 720 60 3 0 0 0
+#hdmi_group=2
+#hdmi_mode=1
+#hdmi_mode=87
+#display_rotate=4
