@@ -51,7 +51,8 @@ echo '/boot/config.txt'
 echo '/boot/cmdline.txt'
 
  sudo mv cmdline.txt /boot/cmdline.txt 
- 
+echo '/boot/overlays'
+sudo mv adafruit-st7735r.dtbo /boot/overlays
 # reboot system :))))
 
   whiptail --msgbox "The system will now reboot" 8 40
