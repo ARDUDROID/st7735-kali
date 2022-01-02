@@ -38,21 +38,21 @@ cmake ..
 make
 sudo install fbcp /usr/local/bin/fbcp
 cd ..
-
+cd ..
 echo 'rc.local'
 
-sudo mv rc.local /etc/ 
+sudo cp rc.local /etc/ 
 
 echo '/boot/config.txt'
 
- sudo mv config.txt /boot/config.txt
+ sudo cp config.txt /boot/config.txt
  
 
 echo '/boot/cmdline.txt'
 
- sudo mv cmdline.txt /boot/cmdline.txt 
+ sudo cp cmdline.txt /boot/cmdline.txt 
 echo '/boot/overlays'
-sudo mv adafruit-st7735r.dtbo /boot/overlays
+sudo cp adafruit-st7735r.dtbo /boot/overlays
 # reboot system :))))
 
   whiptail --msgbox "The system will now reboot" 8 40
