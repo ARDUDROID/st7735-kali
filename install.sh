@@ -41,7 +41,7 @@ cd ..
 cd ..
 echo 'rc.local'
 
-sudo cp rc.local /etc/ 
+sudo mv rc.local /etc/ 
 
 echo '/boot/config.txt'
 
@@ -52,7 +52,7 @@ echo '/boot/cmdline.txt'
 
  sudo mv cmdline.txt /boot 
 echo '/boot/overlays'
-sudo cp adafruit-st7735r.dtbo /boot/overlays
+sudo mv adafruit-st7735r.dtbo /boot/overlays
 # reboot system :))))
 
   whiptail --msgbox "The system will now reboot" 8 40
